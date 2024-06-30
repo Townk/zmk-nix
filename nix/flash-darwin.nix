@@ -1,10 +1,11 @@
-{
-  lib,
-  writeShellApplication,
-  firmware,
+{ lib
+, writeShellApplication
+, firmware
+, script-name ? "zmk-uf2-flash"
 }:
+
 writeShellApplication {
-  name = "zmk-uf2-flash";
+  name = script-name;
 
   runtimeInputs = [
   ];
